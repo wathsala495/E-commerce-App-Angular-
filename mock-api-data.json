@@ -1,0 +1,30 @@
+{"user":[
+    {
+        "name":"Avish Mishra",
+        "mobNumber":"1234567891",
+        "age":29,
+        "dob":"1995-05-12",
+        "email":"admin@gmail.com",
+        "password":"123456",
+        "address":{
+            "addLine1":"District Center",
+            "addLine2":"Janakpuri",
+            "city":"New Delhi",
+            "state":"Delhi",
+            "zipCode":"110058"
+        },
+        "language":[
+            "English",
+            "Hindi",
+            "Bhojpuri"
+        ],
+        "gender":"Male",
+        "aboutYou":"I am a software developer ...",
+        "uploadPhoto":"ashish.png",
+        "agreetc":true,
+        "role":"Admin",
+        "id":1
+
+
+    }
+]}
