@@ -30,19 +30,19 @@
             <a class="nav-link disabled" href="">About Us</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link "  [routerLink]="['/my-order']">Order B</a>
+            <a class="nav-link "  [routerLink]="['/my-order']" *ngIf="user_role=='buyer'">Order B</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link "  [routerLink]="['/all-order']">All Order A</a>
+            <a class="nav-link "  [routerLink]="['/all-order']"  *ngIf="user_role=='admin'">All Order A</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link "   [routerLink]="['/seller/product']">Product S</a>
+            <a class="nav-link "   [routerLink]="['/seller/product']"  *ngIf="user_role=='seller'">Product S</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link " [routerLink]="['/admin/product']">All Product A</a>
+            <a class="nav-link " [routerLink]="['/admin/product']"  *ngIf="user_role=='admin'">All Product A</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link " [routerLink]="['/admin/user']">User A</a>
+            <a class="nav-link " [routerLink]="['/admin/user']"  *ngIf="user_role=='admin'">Users A</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link " >Contact Us</a>
@@ -56,7 +56,7 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         
-        <ul class="navbar-nav  ml-auto">
+        <ul class="navbar-nav  ml-auto" *ngIf="!logged_in">
             <li class="nav-item ">
                 <a class="nav-link "  [routerLink]="['/sign-in']">sign In</a>
               </li>
@@ -64,16 +64,17 @@
                 <a class="nav-link " [routerLink]="['/sign-up']" >Sign Up</a>
               </li>
         </ul>
-        <ul class="navbar-nav  ml-auto">
-            <li class="nav-item ">
+        <ul class="navbar-nav  ml-auto" *ngIf="logged_in">
+            <li class="nav-item " >
                 <a class="nav-link sim-pointer" [routerLink]="['/my-profile']" >My Profile</a>
               </li>
             <li class="nav-item ">
-                <a class="nav-link sim-pointer"  >Logout</a>
+                <a class="nav-link sim-pointer" (click)="logout()" >Logout</a>
               </li>
         </ul>
       </div>
     </div>
   </nav>
+ 
 
   <!-- 2:10 -->

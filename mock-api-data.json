@@ -1,30 +1,205 @@
-{"user":[
+{
+  "user": [
     {
-        "name":"Avish Mishra",
-        "mobNumber":"1234567891",
-        "age":29,
-        "dob":"1995-05-12",
-        "email":"admin@gmail.com",
-        "password":"123456",
-        "address":{
-            "addLine1":"District Center",
-            "addLine2":"Janakpuri",
-            "city":"New Delhi",
-            "state":"Delhi",
-            "zipCode":"110058"
-        },
-        "language":[
-            "English",
-            "Hindi",
-            "Bhojpuri"
-        ],
-        "gender":"Male",
-        "aboutYou":"I am a software developer ...",
-        "uploadPhoto":"ashish.png",
-        "agreetc":true,
-        "role":"Admin",
-        "id":1
-
-
+      "name": "Avish Mishra",
+      "mobNumber": "1234567891",
+      "age": 29,
+      "dob": "1995-05-12",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "address": {
+        "id": 1,
+        "addLine1": "District Center",
+        "addLine2": "Janakpuri",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "zipCode": "110058"
+      },
+      "language": [
+        "English",
+        "Hindi",
+        "Bhojpuri"
+      ],
+      "gender": "Male",
+      "aboutYou": "I am a software developer ...",
+      "uploadPhoto": "ashish.png",
+      "agreetc": true,
+      "role": "admin",
+      "id": "1"
+    },
+    
+    {
+      "id": "9ea9",
+      "name": "sssssss",
+      "mobNumber": "3333333",
+      "age": 34,
+      "dob": "2024-10-04",
+      "email": "s@gmail.com",
+      "password": "123456",
+      "address": {
+        "id": 0,
+        "addLine1": "dddddd",
+        "addLine2": "rtgv",
+        "city": "eerrd",
+        "state": ".....",
+        "zipCode": "34543"
+      },
+      "language": [
+        ""
+      ],
+      "gender": "Male",
+      "aboutYou": "ffccccc",
+      "uploadPhoto": "C:\\fakepath\\image 1.jpeg",
+      "agreetc": true,
+      "role": "seller"
+    },
+    {
+      "id": "8439",
+      "name": "hhjj",
+      "mobNumber": "9876654",
+      "age": 234,
+      "dob": "2024-10-03",
+      "email": "su@gmail.com",
+      "password": "1323456",
+      "address": {
+        "id": 0,
+        "addLine1": "hjhjhjhhg",
+        "addLine2": "frddde",
+        "city": "njnjnu",
+        "state": ".....",
+        "zipCode": "23456"
+      },
+      "language": [
+        "english"
+      ],
+      "gender": "Female",
+      "aboutYou": "njnjnj",
+      "uploadPhoto": "C:\\fakepath\\image 1.jpeg",
+      "agreetc": true,
+      "role": "seller"
+    },
+    {
+      "id": "ab99",
+      "name": "wathsala",
+      "mobNumber": "0703345678",
+      "age": 24,
+      "dob": "2024-10-03",
+      "email": "w@gmail.com",
+      "password": "12345678",
+      "address": {
+        "id": 0,
+        "addLine1": "awedfrt",
+        "addLine2": "vfdfgf",
+        "city": "tangalle",
+        "state": ".....",
+        "zipCode": "84356"
+      },
+      "language": [
+        "english"
+      ],
+      "gender": "Female",
+      "aboutYou": "about me",
+      "uploadPhoto": "C:\\fakepath\\image 1.jpeg",
+      "agreetc": true,
+      "role": "seller"
+    },
+    {
+      "id": "fb5c",
+      "name": "amila",
+      "mobNumber": "0747745678",
+      "age": 24,
+      "dob": "2024-10-12",
+      "email": "amila@gmail.com",
+      "password": "12345678",
+      "address": {
+        "id": 0,
+        "addLine1": "Nalagama Rd",
+        "addLine2": "polommaruwa",
+        "city": "Tangalle",
+        "state": ".....",
+        "zipCode": "45000"
+      },
+      "language": [
+        "english"
+      ],
+      "gender": "Male",
+      "aboutYou": "about me",
+      "uploadPhoto": "C:\\fakepath\\image 1.jpeg",
+      "agreetc": true,
+      "role": "buyer"
     }
-]}
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "Product 1",
+      "uploadPhoto": "ashish.png",
+      "productDesc": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus tenetur autem praesentium nam neque veniam explicabo, dicta laboriosam, iste expedita numquam eaque, fugit error aspernatur nostrum in exercitationem eius asperiores.",
+      "mrp": "1000",
+      "dp": "100",
+      "status": "publish"
+    },
+    {
+      "id": "5",
+      "name": "Product 1",
+      "uploadPhoto": "ashish.png",
+      "productDesc": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus tenetur autem praesentium nam neque veniam explicabo, dicta laboriosam, iste expedita numquam eaque, fugit error aspernatur nostrum in exercitationem eius asperiores.",
+      "mrp": "1000",
+      "dp": "100",
+      "status": "publish"
+    },
+    {
+      "id": "2",
+      "name": "Product 2",
+      "uploadPhoto": "ashish.png",
+      "productDesc": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus tenetur autem praesentium nam neque veniam explicabo, dicta laboriosam, iste expedita numquam eaque, fugit error aspernatur nostrum in exercitationem eius asperiores.",
+      "mrp": "2000",
+      "dp": "200",
+      "status": "inactive"
+    },
+    {
+      "id": "3",
+      "name": "Product 3",
+      "uploadPhoto": "ashish.png",
+      "productDesc": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus tenetur autem praesentium nam neque veniam explicabo, dicta laboriosam, iste expedita numquam eaque, fugit error aspernatur nostrum in exercitationem eius asperiores.",
+      "mrp": "3000",
+      "dp": "300",
+      "status": "draft"
+    },
+    {
+      "id": "4",
+      "name": "Product 4",
+      "uploadPhoto": "ashish.png",
+      "productDesc": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus tenetur autem praesentium nam neque veniam explicabo, dicta laboriosam, iste expedita numquam eaque, fugit error aspernatur nostrum in exercitationem eius asperiores.",
+      "mrp": "4000",
+      "dp": "400",
+      "status": "draft"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 3,
+      "sellerId": 2,
+      "product": {
+        "id": 2,
+        "name": "Product 2",
+        "uploadPhoto": "ashish.png",
+        "productDesc": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus tenetur autem praesentium nam neque veniam explicabo, dicta laboriosam, iste expedita numquam eaque, fugit error aspernatur nostrum in exercitationem eius asperiores.",
+        "mrp": "2000",
+        "dp": "200",
+        "status": "inactive"
+      },
+      "deleveryAddress": {
+        "id": 0,
+        "addLine1": "Marathalli",
+        "addLine2": "Aswathnagar",
+        "city": "Bangalore",
+        "state": "Choose",
+        "zipode": 560037
+      },
+      "contact": "1234567890",
+      "dateTime": "10/07/2024"
+    }
+  ]
+}

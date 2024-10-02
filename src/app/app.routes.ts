@@ -11,6 +11,7 @@ import { SellerDashboardComponent } from './customer/seller/seller-dashboard/sel
 import { BuyerDashboardComponent } from './customer/buyer/buyer/buyer-dashboard/buyer-dashboard.component';
 import { CheckoutComponent } from './customer/buyer/checkout/checkout.component';
 import { PageNotFoundComponent } from './shared/layouts/page-not-found/page-not-found.component';
+import { AdminAuthGuardLogin, AdminAuthGuardService, BuyerAuthGuardService, SellerAuthGuardService, SellerBuyerAuthGuardLogin } from './shared/services/auth-guard.service';
 
 export const routes: Routes = [
     {
@@ -32,7 +33,8 @@ export const routes: Routes = [
     },
     // admin
     {
-        path:"",children:[
+        path:"",canActivate:[AdminAuthGuardLogin],children:[
+        // path:"",children:[
             {
                 path:"admin-login",
                 component:AdminLoginComponent
@@ -41,7 +43,8 @@ export const routes: Routes = [
         ]
     },
     {
-        path:"",children:[
+        path:"",canActivate:[AdminAuthGuardService],children:[
+        // path:"",children:[
            { path:"admin-dashboard",
             component:AdminDashboardComponent
            },
@@ -55,7 +58,8 @@ export const routes: Routes = [
         ]
     },
     {
-       path:"",children:[
+       path:"",canActivate:[SellerBuyerAuthGuardLogin],children:[
+    //    path:"",children:[
         {
             path:"sign-in",
             component:SigninSignupComponent
@@ -67,7 +71,8 @@ export const routes: Routes = [
        ]
     },
     {
-        path:"",children:[
+        path:"",canActivate:[SellerAuthGuardService],children:[
+        // path:"",children:[
             {
                 path:"seller-dashboard",
                 component:SellerDashboardComponent
@@ -77,7 +82,8 @@ export const routes: Routes = [
             }
         ]
     },{
-        path:"",children:[
+        path:"",canActivate:[BuyerAuthGuardService],children:[
+        // path:"",children:[
             {
                 path:"buyer-dashboard",
                 component:BuyerDashboardComponent
