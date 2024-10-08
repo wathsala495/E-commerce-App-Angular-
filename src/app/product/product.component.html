@@ -1,1 +1,95 @@
-<p>product works!</p>
+<br>
+<div class="row">
+    <div class="col-md-10"><strong>All Product list</strong></div>
+    <div class="col-md-2">
+        <button class="btn btn-dark float-right" type="button" (click)="addProductPopup()" data-bs-toggle="modal" data-bs-target="#addEditProductModal">Add Product</button>
+    </div>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product name</th>
+            <!-- <th scope="col">Display Image</th> -->
+            <th scope="col">MRP</th>
+            <th scope="col">DP</th>
+            <!-- <th scope="col">Description</th> -->
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product_data of all_product_data; let i=index">
+             <th scope="row">{{i+1}}</th>
+             <th scope="row">{{product_data.name}}</th>
+             <!-- <th scope="row">{{product_data.uploadPhoto}}</th> -->
+             <th scope="row">{{product_data.mrp}}</th>
+             <th scope="row">{{product_data.dp}}</th>
+             <!-- <th scope="row">{{product_data.productDesc}}</th> -->
+             <th scope="row">{{product_data.status}}</th>
+             <th scope="row">
+               <span class="sim-pointer" (click)="editProductPopup(product_data.id)" data-bs-toggle="modal" data-bs-target="#addEditProductModal">Edit</span>&nbsp; &nbsp;
+               <span class="sim-pointer" (click)="deleteProduct(product_data.id)" data-bs-toggle="modal" data-bs-target="#addEditProductModal">Delete</span>
+             </th>
+             
+             
+             
+
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="addEditProductModal" tableindex="1" role="dialog" aria-labelledby="addEditUserTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{popup_header}}</h5>
+                <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <form [formGroup]="addEditProductDForm">
+                            <div class="form-group">
+                                <label for="productName">Product Name</label>
+                                <input type="text" class="form-control" placeholder="Product Name" formControlName="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="productImage">Product Image Url</label>
+                                <input type="text" class="form-control" placeholder="Photo" formControlName="uploadPhoto">
+                            </div>
+                            <div class="form-group">
+                                <label for="productDescription">Product Description</label>
+                                <input type="text" class="form-control" placeholder="Description" formControlName="productDesc">
+                            </div>
+                            <div class="form-group">
+                                <label for="productMRP">Product MRP</label>
+                                <input type="text" class="form-control" placeholder="MRP" formControlName="mrp">
+                            </div>
+                            <div class="form-group">
+                                <label for="productDP">Product DP</label>
+                                <input type="text" class="form-control" placeholder="DP" formControlName="dp">
+                            </div>
+                            <div class="form-group">
+                                <label for="productStatus">Product Status</label>
+                               <select formControlName="status" class="form-control">
+                                <option value="draft">Draft</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="publish">Publish</option>
+                               </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" (click)="addNewProduct()" *ngIf="add_product" >Add Product</button>
+                                <button class="btn btn-warning" (click)="updateProduct()" *ngIf="edit_product">Edit Product</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- 7:11 -->

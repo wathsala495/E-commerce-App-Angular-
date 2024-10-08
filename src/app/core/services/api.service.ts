@@ -20,8 +20,14 @@ export class ApiService {
     return throwError(error.error)
   }
 
-  get(path:string,params:HttpParams=new HttpParams()):Observable<any>{
-    return this.http.get(path,{params}).pipe(catchError(this.formatErrors))
+  // get(path:string, params:HttpParams =new HttpParams()):Observable<any>{
+  //   return this.http.get(path,{params}).pipe(catchError(this.formatErrors))
+  // }
+
+  get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
+    return this.http.get(path, { params }).pipe(
+      catchError(this.formatErrors) // Handle errors properly
+    );
   }
   put(path:string,body:Object={}):Observable<any>{
     return this.http.put(path,JSON.stringify(body),this.httpOption).pipe(catchError(this.formatErrors))
@@ -29,7 +35,12 @@ export class ApiService {
   post(path:string,body:Object={}):Observable<any>{
     return this.http.post(path,JSON.stringify(body),this.httpOption).pipe(catchError(this.formatErrors))
   }
-  delete(path:string):Observable<any>{
-    return this.delete(path).pipe(catchError(this.formatErrors))
+ 
+  
+  delete(path: string): Observable<any> {
+    return this.http.delete(path).pipe(
+      catchError(this.formatErrors) // Handle errors properly
+    );
   }
+  
 }

@@ -26,7 +26,12 @@ public all_user=  "http://localhost:3000/user"
   }
   // get data of individual user
   singleUser(user_id:any){
-    return this.apiService.get(this.user_url,user_id)
+    console.log("api"+this.user_url,user_id)
+    return this.apiService.get(this.user_url+user_id)
+    // return this.apiService.get("api/"+this.user_url+user_id)
+    // return this.apiService.get('api/'+user_id)
+    // return this.apiService.get('api/id='+user_id)
+    
   }
 
   //update data of individual user

@@ -12,6 +12,7 @@ export class LoginSignupService {
 
   authLogin(user_name:any,password:any){
     // return this.apiService.get(this.login_url='/user?email='+user_name+'&password='+password)
+    console.log('api/user?email='+user_name+'&password='+password)
     return this.apiService.get('api/user?email='+user_name+'&password='+password)
 
   }
